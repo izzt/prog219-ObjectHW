@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <title>Rate A Movie</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <LINK REL=StyleSheet HREF="movierating.css".css" TYPE="text/css">
+       <link rel="stylesheet" href="css.css" type="text/css">
        <script src="main.js"></script>
        <script src="movie.js"></script>
 </head>
-
 <body>
-    <h2> Add A Movie</h2>
-    <form action="http://www.example.com/login.php">
+     <div class="main">
+    <h1> Add A Movie</h1>
+        <form action="http://www.example.com/login.php">
         <p>Movie Title:
             <input id="movieTitle" type="text" name="movieTitle" size="15" maxlength="30">
-        </p><br>
+        </p>
+        <br>
         <p>Rating:
             <select id="rating" name="rating">
 				<option value="1">one star</option>
@@ -23,22 +24,19 @@
                 <option value="4">four star</option>
                 <option value="5">five star</option>
 			</select>
-
         </p>
     </form>
     <br>
     
     <button id="addAMovie" type="button" >Add A Movie</button>  <br />
+     <br />
     <button id="showMovieRatings" type="button" >Show Movie Ratings</button>  <br />
-
     <br>
-    <div>List of Movies and the Ratings</div><br>
-    <table id="myTable">
-        <tr>
-            <th scope="col">Movies</th>
-            <th scope="col">Ratings</th>
-        </tr>
-    </table>
-
+    <section id="myTable">
+            <h3 scope="col" >Movies</h3>
+            <h3 scope="col">Ratings</h3>
+        
+    </section>
+    </div>    
 </body>
 </html>
