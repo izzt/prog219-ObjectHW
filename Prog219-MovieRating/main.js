@@ -1,4 +1,3 @@
-
 var movies=[];
 $(document).ready(function() {
     $("#addAMovie").click(function() 
@@ -6,6 +5,7 @@ $(document).ready(function() {
     {
         var movieTitle = $('#movieTitle').val()
         var rating =  $('#rating').val()
+      
         addAMovieClicked(movieTitle,rating);
     });
 });
@@ -40,11 +40,11 @@ $(document).ready(function() {
 
 function showMovieRatingsClicked(movieTitle, rating)
 {
-    $("#myTable").find('tbody')
+    $("#myTable").find('h3')
     .append(
-   $('<tr>')
-   .append($('<td>').text(movieTitle))
-   .append($('<td>').text(rating))
+   $('<p>')
+   .append($('<p>').text(movieTitle))
+   .append($('<p>').text(rating))
         )
 }
 
