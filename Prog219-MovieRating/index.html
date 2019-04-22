@@ -37,6 +37,51 @@
             <h3 scope="col">Ratings</h3>
         
     </section>
+    </div>    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rate A Movie</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+       <link rel="stylesheet" href="css.css" type="text/css">
+       <script src="main.js"></script>
+       <script src="movie.js"></script>
+</head>
+<body>
+     <div class="main">
+    <h1> Add A Movie</h1>
+        <form action="http://www.example.com/login.php">
+        <p>Movie Title:
+            <input id="movieTitle" type="text" name="movieTitle" size="15" maxlength="30">
+        </p>
+        <br>
+        <p>Rating:
+            <select id="rating" name="rating">
+				<option value="1">one star</option>
+				<option value="2">two star</option>
+                <option value="3">three star</option>
+                <option value="4">four star</option>
+                <option value="5">five star</option>
+			</select>
+        </p>
+    </form>
+    <br>
+    
+    <button id="addAMovie" type="button|submit|reset" >Add A Movie</button>  <br />
+     <br />
+    <button id="showMovieRatings" type="button" >Show Movie Ratings</button>  <br />
+    <br>
+    <div class="ratediv">    
+    <table id="myTable">
+        <tr>
+            <th scope="col">Movies</th>
+            <th scope="col">Ratings</th>
+        </tr>
+    </table>
     </div>    
+
+    </div>    
+</body>
+</html>
 </body>
 </html>
