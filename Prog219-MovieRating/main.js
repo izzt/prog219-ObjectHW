@@ -1,3 +1,4 @@
+
 var movies=[];
 $(document).ready(function() {
     $("#addAMovie").click(function() 
@@ -19,7 +20,7 @@ function addAMovieClicked(movieTitle, rating)
         var movie = new Movie(movieTitle, rating);
         movie.validate();   
         movies.push(movie);
-        console.log(movies);
+        console.log(movies.toString());
 
 
 }
@@ -32,11 +33,23 @@ $(document).ready(function() {
         console.log(movies[i].movieTitle);
         console.log(movies[i].rating);
 
-        showMovieRatingsClicked(movies[i].movieTitle, movies[i].rating);
+        showMovieRatingsClicked(movies[i].movieTitle ,movies[i].rating);
     }
     });
 });
+function clear(){
+    document.getElementById("addAMovie").reset();
+}
 
+function showMovieRatingsClicked(movieTitle, rating)
+{
+    $("#myTable").find('tbody')
+    .append(
+   $('<tr>')
+   .append($('<td>').text(movieTitle))
+   .append($('<td>').text(rating))
+        )
+}
 
 function showMovieRatingsClicked(movieTitle, rating)
 {
