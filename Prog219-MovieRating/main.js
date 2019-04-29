@@ -6,6 +6,7 @@ $(document).ready(function() {
     {
         var movieTitle = $('#movieTitle').val()
         var rating =  $('#rating').val()
+      
         addAMovieClicked(movieTitle,rating);
         
     });
@@ -33,11 +34,13 @@ $(document).ready(function() {
         console.log(movies[i].movieTitle);
         console.log(movies[i].rating);
 
-        showMovieRatingsClicked(movies[i].movieTitle, movies[i].rating);
+        showMovieRatingsClicked(movies[i].movieTitle ,movies[i].rating);
     }
     });
 });
-
+function clear(){
+    document.getElementById("addAMovie").reset();
+}
 
 function showMovieRatingsClicked(movieTitle, rating)
 {
@@ -46,6 +49,16 @@ function showMovieRatingsClicked(movieTitle, rating)
    $('<tr>')
    .append($('<td>').text(movieTitle))
    .append($('<td>').text(rating))
+        )
+}
+
+function showMovieRatingsClicked(movieTitle, rating)
+{
+    $("#myTable").find('h3')
+    .append(
+   $('<p>')
+   .append($('<p>').text(movieTitle))
+   .append($('<p>').text(rating))
         )
 }
 
